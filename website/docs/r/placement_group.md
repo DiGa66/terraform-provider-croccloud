@@ -3,13 +3,12 @@ subcategory: "EC2 (Elastic Compute Cloud)"
 layout: "aws"
 page_title: "aws_placement_group"
 description: |-
-  Provides an EC2 placement group.
+  Manages an EC2 placement group.
 ---
 
 # Resource: aws_placement_group
 
-Provides an EC2 placement group.
-
+Manages an EC2 placement group.
 For more information, see the documentation on [Placement groups][placement-groups].
 
 [placement-groups]: https://docs.cloud.croc.ru/en/services/compute/placementgroups.html

@@ -3,12 +3,12 @@ subcategory: "ELB (Elastic Load Balancing)"
 layout: "aws"
 page_title: "aws_lb"
 description: |-
-  Provides a Load Balancer resource.
+  Manages a Load Balancer.
 ---
 
 # Resource: aws_lb
 
-Provides a Load Balancer resource.
+Manages a Load Balancer.
 
 ~> **Note** `aws_alb` is known as `aws_lb`. The functionality is identical.
 

@@ -3,12 +3,12 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_security_group"
 description: |-
-  Provides a security group resource.
+  Manages a security group.
 ---
 
 # Resource: aws_security_group
 
-Provides a security group resource.
+Manages a security group.
 
 ~> **Note on Security Groups and Security Group Rules:** Terraform currently
 provides both a standalone [`aws_security_group_rule`][tf-security-group-rule] (a single `ingress` or

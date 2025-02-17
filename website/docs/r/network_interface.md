@@ -3,13 +3,12 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_network_interface"
 description: |-
-  Provides an elastic network interface (ENI) resource.
+  Manages an elastic network interface (ENI).
 ---
 
 # Resource: aws_network_interface
 
-Provides an elastic network interface (ENI) resource.
-
+Manages an elastic network interface (ENI) resource.
 For more information, see the documentation on [Network interfaces][network-interfaces].
 
 [network-interfaces]: https://docs.cloud.croc.ru/en/services/networks/interfaces/operations.html
