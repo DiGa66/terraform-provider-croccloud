@@ -3,13 +3,12 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_vpc"
 description: |-
-  Provides a VPC resource.
+  Manages a VPC.
 ---
 
 # Resource: aws_vpc
 
-Provides a VPC resource.
-
+Manages a VPC.
 For more information, see the documentation on [VPC][vpc].
 
 ## Example Usage

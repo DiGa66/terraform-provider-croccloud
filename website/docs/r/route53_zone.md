@@ -3,7 +3,7 @@ subcategory: "Route 53"
 layout: "aws"
 page_title: "aws_route53_zone"
 description: |-
-  Manages a Route53 Hosted Zone
+  Manages a Route53 Hosted Zone.
 ---
 
 # Resource: aws_route53_zone

@@ -3,7 +3,7 @@ subcategory: "EBS (EC2)"
 layout: "aws"
 page_title: "aws_ebs_volume"
 description: |-
-  Provides an elastic block storage resource.
+  Manages a single EBS volume.
 ---
 
 # Resource: aws_ebs_volume

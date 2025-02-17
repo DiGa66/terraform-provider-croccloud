@@ -3,13 +3,12 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_vpc_dhcp_options"
 description: |-
-  Provides a VPC DHCP Options resource.
+  Manages a DHCP Options for a VPC.
 ---
 
 # Resource: aws_vpc_dhcp_options
 
-Provides a VPC DHCP options resource.
-
+Manages a DHCP Options for a VPC.
 For more information, see the documentation on [DHCP options][dhcp-options].
 
 ## Example Usage

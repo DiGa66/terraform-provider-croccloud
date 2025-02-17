@@ -3,13 +3,12 @@ subcategory: "VPN (Site-to-Site)"
 layout: "aws"
 page_title: "aws_vpn_gateway"
 description: |-
-    Provides details about a specific VPN gateway.
+    Provides information about a specific VPN gateway.
 ---
 
 # Data Source: aws_vpn_gateway
 
-The VPN Gateway data source provides details about
-a specific VPN gateway.
+Provides information about a specific VPN gateway.
 
 -> The terms VPC, Internet Gateway, VPN Gateway are equivalent
 
