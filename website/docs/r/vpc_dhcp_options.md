@@ -3,12 +3,12 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_vpc_dhcp_options"
 description: |-
-  Manages a DHCP Options for a VPC.
+  Manages a DHCP options for a VPC.
 ---
 
 # Resource: aws_vpc_dhcp_options
 
-Manages a DHCP Options for a VPC.
+Manages a DHCP options for a VPC.
 For more information, see the documentation on [DHCP options][dhcp-options].
 
 ## Example Usage
@@ -41,7 +41,7 @@ resource "aws_vpc_dhcp_options" "foo" {
 
 The following arguments are supported:
 
-* `domain_name` - (Optional) the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
+* `domain_name` - (Optional) the suffix domain name to use by default when resolving non fully qualified domain names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
 * `domain_name_servers` - (Optional) List of IP addresses of domain name servers or `AmazonProvidedDNS`. We recommend using only one of the two parameters.
 * `ntp_servers` - (Optional) List of NTP servers to configure. You can specify up to four IP addresses.
 * `netbios_name_servers` - (Optional) List of NETBIOS name servers. You can specify up to four IP addresses.
@@ -53,7 +53,7 @@ The following arguments are supported:
 * Notice that all arguments are optional, but you have to specify at least one argument.
 * `domain_name_servers`, `netbios_name_servers`, `ntp_servers` are limited to maximum four servers only.
 * To actually use the DHCP options set you need to associate it to a VPC using [`aws_vpc_dhcp_options_association`][tf-main-route-table-association].
-* If you delete a DHCP options set, all VPCs using it will be associated to `default` DHCP Option Set.
+* If you delete a DHCP options set, all VPCs using it will be associated to `default` DHCP options set.
 * In most cases unless you're configuring your own DNS you'll want to set `domain_name_servers` to `AmazonProvidedDNS`.
 
 ## Attributes Reference
@@ -62,8 +62,8 @@ The following arguments are supported:
 
 In addition to all arguments above, the following attributes are exported:
 
-* `id` - ID of the DHCP options Set.
-* `arn` - ARN of the DHCP options Set.
+* `id` - ID of the DHCP options set.
+* `arn` - ARN of the DHCP options set.
 * `tags_all` -Map of tags to assign to the resource, including those inherited from the provider [`default_tags` configuration block][default-tags].
 
 ### Unsupported attributes
@@ -74,7 +74,7 @@ The following attributes are not currently supported: `owner_id` .
 
 ## Import
 
-VPC DHCP Options can be imported using the `dhcp options id`, e.g.,
+VPC DHCP options can be imported using the `dhcp options id`, e.g.,
 
 ```
 $ terraform import aws_vpc_dhcp_options.my_options dopt-12345678

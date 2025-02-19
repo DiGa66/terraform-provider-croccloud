@@ -3,16 +3,16 @@ subcategory: "ELB (Elastic Load Balancing)"
 layout: "aws"
 page_title: "aws_lb_listener"
 description: |-
-  Provides information about a Load Balancer Listener.
+  Provides information about a load balancer listener.
 ---
 
 # Data Source: aws_lb_listener
 
 ~> **Note** `aws_alb_listener` is known as `aws_lb_listener`. The functionality is identical.
 
-Provides information about a Load Balancer Listener.
+Provides information about a load balancer listener.
 
-This data source can prove useful when a module accepts an LB Listener as an input variable and needs to know the LB it is attached to, or other information specific to the listener in question.
+This data source can prove useful when a module accepts an LB listener as an input variable and needs to know the LB it is attached to, or other information specific to the listener in question.
 
 ## Example Usage
 
@@ -49,4 +49,4 @@ The following arguments are supported:
 
 ## Attributes Reference
 
-See the [LB Listener Resource](/docs/providers/aws/r/lb_listener.html) for details on the returned attributes - they are identical.
+See the [LB listener Resource](/docs/providers/aws/r/lb_listener.html) for details on the returned attributes - they are identical.

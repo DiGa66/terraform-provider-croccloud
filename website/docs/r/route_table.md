@@ -10,8 +10,8 @@ description: |-
 
 Creates a VPC routing table.
 
-~> **Note on Route Tables and Routes:** Terraform currently
-provides both a standalone [`aws_route` resource][tf-route] and a Route Table resource with routes
+~> **Note on route tables and routes:** Terraform currently
+provides both a standalone [`aws_route` resource][tf-route] and a route table resource with routes
 defined in-line. At this time you cannot use a route table with in-line routes
 in conjunction with any route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
@@ -23,7 +23,7 @@ this resource will delete any propagating gateways not explicitly listed in
 `propagating_vgws`. Omit this argument when defining route propagation using
 the separate resource.
 
-For more information, see the documentation on [Route Tables][route-tables].
+For more information, see the documentation on [route tables][route-tables].
 
 ## Example Usage
 
@@ -126,7 +126,7 @@ The following attributes are not currently supported:
 
 ## Import
 
-Route Tables can be imported using the route table `id`. For example, to import
+Route tables can be imported using the route table `id`. For example, to import
 route table `rtb-12345678`, use this command:
 
 ```

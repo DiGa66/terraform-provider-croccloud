@@ -3,7 +3,7 @@ subcategory: "VPN (Site-to-Site)"
 layout: "aws"
 page_title: "aws_customer_gateway"
 description: |-
-  Provides information about an existing Customer Gateway.
+  Provides information about an existing customer gateway.
 ---
 
 # Data Source: aws_customer_gateway
@@ -12,7 +12,7 @@ Provides information about an existing customer gateway.
 
 ## Example Usage
 
--> The terms VPC, Internet Gateway, VPN Gateway are equivalent.
+-> The terms VPC, Internet gateway, VPN gateway are equivalent.
 
 ```terraform
 data "aws_customer_gateway" "selected" {
