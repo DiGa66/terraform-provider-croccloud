@@ -65,7 +65,7 @@ The following attributes are not currently supported:
 
 ## Import
 
-EBS volumes can be imported using the `id`, e.g.,
+EBS volumes can be imported using `id`, e.g.,
 
 ```
 $ terraform import aws_ebs_volume.id vol-12345678
