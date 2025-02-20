@@ -6,6 +6,10 @@ description: |-
   Creates an Amazon Machine Image (AMI) from an EBS-backed EC2 instance.
 ---
 
+[default-tags]: https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block
+[operation-timeouts]: https://www.terraform.io/docs/configuration/blocks/resources/syntax.html#operation-timeouts]
+[tf-ami]: ami.html
+
 # Resource: aws_ami_from_instance
 
 Creates an image from an existing EBS-backed EC2 instance.
@@ -38,17 +42,17 @@ resource "aws_ami_from_instance" "example" {
 
 The following arguments are supported:
 
-* `name` - (Required) A region-unique name for the image.
-* `source_instance_id` - (Required) The id of the instance to use as the basis of the image.
-* `tags` - (Optional) Map of tags to assign to the resource. If a provider [`default_tags` configuration block][default-tags] is used, tags with matching keys will overwrite those defined at the provider level.
+* `name` – (Required) A region-unique name for the image.
+* `source_instance_id` – (Required) The ID of the instance to use as the basis of the image.
+* `tags` – (Optional) Map of tags to assign to the resource. If a provider [`default_tags` configuration block][default-tags] is used, tags with matching keys will overwrite those defined at the provider level.
 
 ### Timeouts
 
-The `timeouts` block allows you to specify [timeouts](https://www.terraform.io/docs/configuration/blocks/resources/syntax.html#operation-timeouts) for certain actions:
+The `timeouts` block allows you to specify [timeouts][operation-timeouts] for certain actions:
 
-* `create` - (Default `40 minutes`) Used when creating the image
-* `update` - (Default `40 minutes`) Used when updating the image
-* `delete` - (Default `90 minutes`) Used when deregistering the image
+* `create` – (Default `40 minutes`) Used when creating the image
+* `update` – (Default `40 minutes`) Used when updating the image
+* `delete` – (Default `90 minutes`) Used when deregistering the image
 
 ## Attributes Reference
 
@@ -56,8 +60,8 @@ The `timeouts` block allows you to specify [timeouts](https://www.terraform.io/d
 
 In addition to all arguments above, the following attributes are exported:
 
-* `arn` - The ARN of the image.
-* `id` - The ID of the created image.
+* `arn` – The ARN of the image.
+* `id` – The ID of the created image.
 
 ### Unsupported attributes
 
@@ -68,6 +72,3 @@ The following attribute is not currently supported: `snapshot_without_reboot`.
 This resource also exports a full set of attributes corresponding to the arguments of the
 [`aws_ami`][tf-ami] resource, allowing the properties of the created image to be used elsewhere in the
 configuration.
-
-[default-tags]: https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block
-[tf-ami]: ami.html
