@@ -52,7 +52,7 @@ The following arguments are supported:
   should be attached to created instances. The structure of this block is [described below](#ephemeral_block_device).
 * `root_device_name` – (Optional) The name of the root device.
     * _Valid values_: `disk<N>`, `cdrom<N>`, `floppy<N>`, `menu`, where `<N>` is a disk number
-    *  _Default value_: `disk1`
+    * _Default value_: `disk1`
 * `virtualization_type` – (Optional) Keyword to choose what virtualization mode created instances will use.
     * _Valid values_: `hvm`, `hvm-legacy`
     * _Default value_: `hvm`

@@ -39,7 +39,7 @@ The following arguments are supported:
 * `restorable_by_user_ids` - (Optional) List of the project IDs (`project@customer`).
   that can create volumes from the snapshot.
 * `filter` - (Optional) One or more name/value pairs to use as filters.
-	Valid names and values can be found in the [EC2 API documentation][describe-snapshots].
+    * _Valid values:_ See supported names and values in [EC2 API documentation][describe-snapshots]
 
 ## Attributes Reference
 
