@@ -91,7 +91,8 @@ resource "aws_security_group" "sg_with_changeable_name" {
 
 The following arguments are supported:
 
-* `description` - (Optional, Forces new resource) Security group description. Defaults to `Managed by Terraform`.
+* `description` - (Optional, Forces new resource) Security group description.
+    * _Default value_: `Managed by Terraform`
 * `egress` - (Optional, VPC only) Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
 * `ingress` - (Optional) Configuration block for ingress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below. This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
 * `name_prefix` - (Optional, Forces new resource) Creates a unique name beginning with the specified prefix. Conflicts with `name`.
