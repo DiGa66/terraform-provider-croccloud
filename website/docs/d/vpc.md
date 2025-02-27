@@ -10,13 +10,12 @@ description: |-
 
 Provides information about a specific VPC.
 
-This resource can be useful when a module accepts a vpc id as
-an input variable and needs to, for example, determine the CIDR block of that
-VPC.
+This resource can be useful when a module accepts the ID of a VPC as
+an input variable and needs to, for example, determine the CIDR block of that VPC.
 
 ## Example Usage
 
-The following example shows how one might accept a VPC id as a variable
+The following example shows how one might accept the ID of a VPC as a variable
 and use this data source to obtain the data necessary to create a subnet
 within it.
 
@@ -40,12 +39,12 @@ The arguments of this data source act as filters for querying the available
 VPCs in the current region. The given filters must match exactly one
 VPC whose data will be exported as attributes.
 
-* `cidr_block` - (Optional) The cidr block of the desired VPC.
-* `dhcp_options_id` - (Optional) The DHCP options id of the desired VPC.
+* `cidr_block` - (Optional) The CIDR block of the desired VPC.
+* `dhcp_options_id` - (Optional) The ID of the DHCP options for the desired VPC.
 * `filter` - (Optional) One or more name/value pairs to use as filters.
   A VPC will be selected if any one of the given values matches.
     * _Valid values:_ See supported names and values in [EC2 API documentation][describe-vpcs]
-* `id` - (Optional) The id of the specific VPC to retrieve.
+* `id` - (Optional) The ID of the specific VPC to retrieve.
 * `state` - (Optional) The current state of the desired VPC.
   Can be either `"pending"` or `"available"`.
 * `tags` - (Optional) Map of tags, each pair of which must exactly match

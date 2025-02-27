@@ -22,7 +22,7 @@ For more information about images, see [user documentation][images].
 ## Example Usage
 
 ```terraform
-# Create an image that will start a machine whose root device is backed by
+# Creates an image that will start a machine whose root device is backed by
 # an EBS volume populated from a snapshot. It is assumed that such a snapshot
 # already exists with the id "snap-12345678".
 resource "aws_ami" "example" {
@@ -64,8 +64,7 @@ The `ebs_block_device` blocks has the following structure:
 
 * `device_name` – (Required) The device name of one or more block device mapping entries.
     * _Valid values_: `disk<N>`, `cdrom<N>`, `floppy<N>`, where `<N>` is a disk number
-* `delete_on_termination` – (Optional) Boolean controlling whether the EBS volumes created to
-  support each created instance will be deleted once that instance is terminated.
+* `delete_on_termination` – (Optional, Boolean) Controls whether the EBS volumes will be deleted once the instance for which they were created is terminated.
     * _Default value_: `true`
 * `iops` – (Optional) Number of I/O operations per second the
   created volumes will support.
@@ -74,7 +73,7 @@ The `ebs_block_device` blocks has the following structure:
   EBS volumes.
     * _Constraints_:  If set, the `volume_size` attribute must be at least as large as the referenced
   snapshot
-* `volume_size` – (Optional) The size of created volumes in GiB.
+* `volume_size` – (Optional) The size of created volumes, in GiB.
     * _Constraints_: Required unless `snapshot_id` is set. If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size as the selected snapshot.
 * `volume_type` – (Optional) The type of EBS volume to create.
     * _Valid values_: `st2`, `gp2`, `io2`
@@ -101,15 +100,15 @@ The `timeouts` block allows you to specify [timeouts][timeouts] for certain acti
 
 ### Supported attributes
 
-In addition to the [arguments above](#Argument-Reference), the following attributes are exported:
+In addition to the [arguments above](#argument-reference), the following attributes are exported:
 
 * `arn` – The ARN of the image.
 * `id` – The ID of the created image.
-* `root_snapshot_id` – The snapshot ID for the root volume (for EBS-backed images)
+* `root_snapshot_id` – The ID of the snapshot for the root volume (for EBS-backed images)
 * `image_owner_alias` – The owner alias (for example, `self`) or the project ID.
-* `image_type` – The type of image.
-* `owner_id` – The project ID.
-* `platform` – This value is set to windows for Windows images; otherwise, it is blank.
+* `image_type` – The type of the image.
+* `owner_id` – The ID of the project.
+* `platform` – This value is set to `windows` for Windows images; otherwise, it is blank.
 * `public` – Indicates whether the image has public launch permissions.
 * `tags_all` – Map of tags to assign to the resource, including those inherited from the provider [`default_tags` configuration block][default-tags].
 

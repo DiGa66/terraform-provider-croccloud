@@ -3,7 +3,7 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_default_network_acl"
 description: |-
-  Manage the default network ACL of a VPC.
+  Manages the default network ACL of a VPC.
 ---
 
 # Resource: aws_default_network_acl

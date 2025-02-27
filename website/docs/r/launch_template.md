@@ -58,7 +58,7 @@ resource "aws_launch_template" "example" {
 The following arguments are supported:
 
 * `block_device_mappings` – (Optional) Specify volumes to attach to the instance besides the volumes specified by the image.
-  See [Block Devices](#block-devices) below for details.
+  The structure of this block is [described below](#block-devices).
 * `default_version` – (Optional) Default version of the launch template.
     * _Constraints:_ Conflicts with `update_default_version`
 * `description` – (Optional) Description of the launch template version.
@@ -68,13 +68,15 @@ The following arguments are supported:
     * _Valid values_: `stop`, `terminate`
 * `instance_type` – (Optional) The type of the instance.
 * `key_name` – (Optional) The key name to use for the instance.
-* `monitoring` – (Optional) The monitoring option for the instance. See [Monitoring](#monitoring) below for more details.
-* `name` – (Optional, Conflicts with `name_prefix`) The name of the launch template. If you leave this blank, Terraform will auto-generate a unique name.
-* `name_prefix` – (Optional, Conflicts with `name`) Creates a unique name beginning with the specified prefix.
+* `monitoring` – (Optional) The monitoring option for the instance. The structure of this block is [described below](#monitoring).
+* `name` – (Optional) The name of the launch template. If you leave this blank, Terraform will auto-generate a unique name.
+    _Constraints:_ Conflicts with `name_prefix`
+* `name_prefix` – (Optional) Creates a unique name beginning with the specified prefix.
+    _Constraints:_  Conflicts with `name`
 * `network_interfaces` – (Optional) Customize network interfaces to be attached at instance boot time.
-  See [Network Interfaces](#network-interfaces) below for more details.
-* `placement` – (Optional) The placement of the instance. See [Placement](#placement) below for more details.
-* `tag_specifications` – (Optional) The tags to apply to the resources during launch. See [Tag Specifications](#tag-specifications) below for more details.
+  The structure of this block is [described below](#network-interfaces).
+* `placement` – (Optional) The placement of the instance. The structure of this block is [described below](#placement).
+* `tag_specifications` – (Optional) The tags to apply to the resources during launch. The structure of this block is [described below](#tag-specifications).
 * `tags` – (Optional) Map of tags to assign to the launch template. If a provider [`default_tags` configuration block][default-tags] is used, tags with matching keys will overwrite those defined at the provider level.
 * `update_default_version` – (Optional) Whether to update default version each update.
     * Constraints:_ Conflicts with `default_version`
@@ -83,24 +85,24 @@ The following arguments are supported:
 
 ### Block devices
 
-Configure additional volumes of the instance besides specified by the image.
+Configures additional volumes of the instance besides specified by the image.
 
 To find out more information for an existing image to override the configuration, such as `device_name`, use the [EC2 API][describe-images].
 
 The `block_device_mappings` block has the following structure:
 
 * `device_name` – (Optional) The name of the device to mount.
-* `ebs` – (Optional) Configure EBS volume properties.
+* `ebs` – (Optional) Configures EBS volume properties.
 * `no_device` – (Optional) Suppresses the specified device included in the block device mapping.
 
 The `ebs` block has the following structure:
 
-* `delete_on_termination` – (Optional) Whether the volume should be destroyed on instance termination.
+* `delete_on_termination` – (Optional) Indicates whether the volume should be destroyed on instance termination.
 * `iops` – (Optional) The amount of provisioned IOPS.
-    * _Constraints:_ This must be set with a volume_type of `io2`
-* `snapshot_id` – (Optional) The snapshot ID to mount.
-* `volume_size` – (Optional) The size of the volume in gigabytes.
-* `volume_type` – (Optional) Type of volume.
+    * _Constraints:_ This must be set with the volume_type of `io2`
+* `snapshot_id` – (Optional) The ID of the snapshot to mount.
+* `volume_size` – (Optional) The size of the volume, in GiB.
+* `volume_type` – (Optional) The type of the volume.
     * _Valid values_: `st2`, `gp2`, `io2`
 
 ### Monitoring

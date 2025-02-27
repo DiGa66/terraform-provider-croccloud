@@ -14,7 +14,7 @@ This resource can be used when finding the resource associated with a CIDR. For 
 
 ## Example Usage
 
-The following example shows how one might use a CIDR value to find a network interface id and use this to create a data source of that network interface.
+The following example shows how one might use a CIDR value to find the ID of a network interface and use this to create a data source of that network interface.
 
 ```terraform
 variable "subnet_id" {}

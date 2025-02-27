@@ -41,8 +41,7 @@ data "aws_network_acls" "example" {
 }
 ```
 
-The following example retrieves a network ACL id in a VPC which associated
-with specific subnet.
+The following example retrieves the ID of a network ACL which is associated with a specific subnet in a VPC.
 
 ```terraform
 variable vpc_id {}

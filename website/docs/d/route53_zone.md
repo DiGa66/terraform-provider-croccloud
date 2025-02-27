@@ -38,9 +38,9 @@ The arguments of this data source act as filters for querying the available
 hosted zone. You have to use `zone_id` or `name`, not both of them. The given filter must match exactly one
 hosted zone. If you use `name` field for private hosted zone, you need to add `private_zone` field to `true`
 
-* `zone_id` - (Optional) The hosted zone id of the desired hosted zone.
+* `zone_id` - (Optional) The ID of the desired hosted zone.
 
-* `name` - (Optional) The hosted zone name of the desired hosted zone.
+* `name` - (Optional) The name of the desired hosted zone.
 * `private_zone` - (Optional) Used with `name` field to get a private hosted zone.
 * `vpc_id` - (Optional) Used with `name` field to get a private hosted zone associated with the vpc_id (in this case, private_zone is not mandatory).
 * `tags` - (Optional) Used with `name` field. Map of tags, each pair of which must exactly match a pair on the desired hosted zone.

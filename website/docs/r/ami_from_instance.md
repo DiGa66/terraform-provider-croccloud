@@ -14,7 +14,7 @@ description: |-
 
 Creates an image from an existing EBS-backed EC2 instance.
 
-The created image will refer to implicitly-created snapshots of the instance's
+The created image will refer to implicitly created snapshots of the instance's
 EBS volumes and mimick its assigned block device configuration at the time
 the resource is created.
 

@@ -12,7 +12,7 @@ Provides information about IDs for a vpc_id.
 
 ## Example Usage
 
-The following shows all cidr blocks for every subnet id in a vpc.
+The following shows all CIDR blocks for every subnet ID in a VPC.
 
 ```terraform
 variable vpc_id {}

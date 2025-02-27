@@ -77,13 +77,13 @@ The following attributes are exported:
 * `placement_group` – The placement group of the instance.
 * `private_dns` – The private DNS name assigned to the instance.
     * _Constraints_: For EC2-VPC, this is only available if you've enabled DNS hostnames for your VPC.
-* `private_ip` – The private IP address assigned to the instance
+* `private_ip` – The private IP address assigned to the instance.
 * `secondary_private_ips` – The secondary private IPv4 addresses assigned to the instance's primary network interface in a VPC.
 * `public_dns` – The public DNS name assigned to the instance. For EC2-VPC, this is only available if you've enabled DNS hostnames for your VPC.
 * `public_ip` – The public IP address assigned to the instance, if applicable.
     * _Constraints_: If you are using an [`aws_eip`](../resources/eip.md) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached
-* `root_block_device` – The root block device mappings of the instance
-  The structure of this block is [described below](#root_block_device)
+* `root_block_device` – The root block device mappings of the instance.
+  The structure of this block is [described below](#root_block_device).
 * `security_groups` – The associated security groups.
 * `source_dest_check` – Whether the network interface performs source/destination checking.
 * `subnet_id` – The ID of the VPC subnet.
@@ -100,7 +100,7 @@ The `ebs_block_device` block has the following structure:
 
 * `delete_on_termination` – If the EBS volume will be deleted on termination.
 * `device_name` – The physical name of the device.
-* `iops` – `0` If the EBS volume is not a provisioned IOPS image, otherwise the supported IOPS count.
+* `iops` – `0` if the EBS volume is not a provisioned IOPS image, otherwise the supported IOPS count.
 * `snapshot_id` – The ID of the snapshot.
 * `volume_size` – The size of the volume, in GiB.
 * `volume_type` – The volume type.
@@ -118,8 +118,8 @@ The `ephemeral_block_device` block has the following structure:
 The `root_block_device` block has the following structure:
 
 * `device_name` – The physical name of the device.
-* `delete_on_termination` – If the root block device will be deleted on termination.
-* `iops` – `0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
+* `delete_on_termination` – Indicates whether the root block device will be deleted on termination.
+* `iops` – `0` if the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
 * `volume_size` – The size of the volume, in GiB.
 * `volume_type` – The type of the volume.
 

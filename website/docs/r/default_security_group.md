@@ -3,7 +3,7 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_default_security_group"
 description: |-
-  Manage the default security group resource of a VPC.
+  Manages the default security group resource of a VPC.
 ---
 
 # Resource: aws_default_security_group

@@ -32,7 +32,7 @@ The following arguments are supported:
 
 * `filter` – (Optional) One or more name/value pairs to use as filters.
     * _Valid values_: See names and values in [EC2 API documentation][describe-azs].
-* `state` – (Optional) Allows to filter list of availability zones based on their
+* `state` – (Optional) Filters the list of availability zones based on their
 current state.
     * _Valid values_:  `"available"`, `"information"`, `"impaired"`, `"unavailable"`
 

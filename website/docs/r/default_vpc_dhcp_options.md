@@ -3,7 +3,7 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_default_vpc_dhcp_options"
 description: |-
-  Manage the default DHCP options resource.
+  Manages the default DHCP options resource.
 ---
 
 # Resource: aws_default_vpc_dhcp_options

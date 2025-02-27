@@ -32,17 +32,17 @@ data "aws_ami" "example" {
 
 * `owners` – (Required) List of image owners to limit search. At least one value must be specified.
     * _Valid values_: Project ID (`project@customer`) or `self`
-* `executable_users` – (Optional) Limit search to project with _explicit_ launch permission on the image.
-    * _Valid values_: Project ID (`project@customer`), `all` or `self`
+* `executable_users` – (Optional) Limits search to project with the _explicit_ launch permission on the image.
+    * _Valid values_: Project ID (`project@customer`), `all`, or `self`
 * `filter` – (Optional) One or more name/value pairs to use as filters.
     * _Valid values_: See supported names and values in [EC2 API documentation][describe-images].
 * `most_recent` – (Optional) If more than one result is returned, use the most recent image.
 * `name_regex` – (Optional) A regex string to apply to the image list returned by the EC2 API.
-  It is recommended to combine this with other options to narrow down the list the EC2 API returns.
+  It is recommended to combine this with other options to narrow down the list that the EC2 API returns.
 
 ~> **Note** The search must return a single match, otherwise Terraform will fail.
-Ensure that your search is specific enough to return
-a single image ID only, or use `most_recent` to choose the most recent one. If
+Ensure that your search is specific enough to return the ID of
+a single image  only, or use `most_recent` to choose the most recent one. If
 you want to match multiple images, use the [`aws_ami_ids`](ami_ids.md) data source instead.
 
 ## Attributes Reference
@@ -61,13 +61,13 @@ In addition, the following attributes are exported:
 * `id` – The ID of the image.
 * `image_id` – The ID of the image. Should be the same as the resource `id`.
 * `image_owner_alias` –  The alias of the image owner name.
-* `image_type` – The type of image.
+* `image_type` – The type of the image.
 * `name` – The name of the image that was provided during image creation.
-* `owner_id` – The project ID.
+* `owner_id` – The ID of the project.
 * `platform` – The value is `Windows` for Windows images; otherwise blank.
 * `public` – `true` if the image has public launch permissions.
 * `root_device_name` – The device name of the root device.
-* `root_device_type` – The type of root device (e.g., `ebs` or `instance-store`).
+* `root_device_type` – The type of the root device (e.g., `ebs` or `instance-store`).
 * `root_snapshot_id` – The ID of the snapshot associated with the root device, if any
   (only applies to `ebs` root devices).
 * `state` – The current state of the image. If the state is `available`, the image

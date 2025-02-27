@@ -10,13 +10,13 @@ description: |-
 
 Provides information about a specific security group.
 
-This resource can be used when a module accepts a security group id as
-an input variable and needs to, for example, determine the id of the
+This resource can be used when a module accepts the ID of a security group as
+an input variable and needs to, for example, determine the ID of the
 VPC that the security group belongs to.
 
 ## Example Usage
 
-The following example shows how one might accept a security group id as a variable
+The following example shows how one might accept the ID of a security group as a variable
 and use this data source to obtain the data necessary to create a subnet.
 
 ```terraform
@@ -46,7 +46,7 @@ security group whose data will be exported as attributes.
 * `name` - (Optional) The name that the desired security group must have.
 * `tags` - (Optional) Map of tags, each pair of which must exactly match
   a pair on the desired security group.
-* `vpc_id` - (Optional) The id of the VPC that the desired security group belongs to.
+* `vpc_id` - (Optional) The ID of the VPC that the desired security group belongs to.
 
 ## Attributes Reference
 

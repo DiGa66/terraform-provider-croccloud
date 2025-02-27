@@ -41,6 +41,6 @@ output "public_ips" {
 
 ## Attributes Reference
 
+* `allocation_ids` – The list of all allocation IDs.
 * `id` – The region (e.g., `region-1`).
-* `allocation_ids` – A list of all the allocation IDs.
-* `public_ips` – A list of all the Elastic IP addresses.
+* `public_ips` – The list of all Elastic IP addresses.

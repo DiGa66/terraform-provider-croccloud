@@ -3,7 +3,7 @@ subcategory: "VPC (Virtual Private Cloud)"
 layout: "aws"
 page_title: "aws_default_route_table"
 description: |-
-  Manage the default route table of a VPC.
+  Manages the default route table of a VPC.
 ---
 
 # Resource: aws_default_route_table

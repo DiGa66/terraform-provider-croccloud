@@ -14,7 +14,7 @@ Provides information about a specific EC2 key pair.
 
 ## Example Usage
 
-The following example shows how to get a EC2 key pair from its name.
+The following example shows how to get an EC2 key pair from its name.
 
 ```terraform
 data "aws_key_pair" "example" {
@@ -55,4 +55,4 @@ In addition to all arguments above, the following attributes are exported:
 * `arn` – The ARN of the key pair.
 * `fingerprint` – The SHA-1 digest of the DER encoded private key.
 * `id` – The ID of the key pair.
-* `tags` – Map of tags assigned to the key pair.
+* `tags` – The map of tags assigned to the key pair.
